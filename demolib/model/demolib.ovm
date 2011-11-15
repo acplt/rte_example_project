@@ -1,0 +1,102 @@
+/*****************************************************************************
+*                                                                            *
+*   x i F B S p r o                                                          *
+*   ###############                                                          *
+*                                                                            *
+*   © L T S o f t                                                            *
+*   Agentur für Leittechnik Software GmbH                                    *
+*   Brabanterstr. 13                                                         *
+*   D-50171 Kerpen                                                           *
+*   Tel : 02237/92869-0                                                      *
+*   Fax : 02237/92869-9                                                      *
+*   e-Mail   : ltsoft@ltsoft.de                                              *
+*   Internet : http://www.ltsoft.de                                          *
+*                                                                            *
+******************************************************************************
+*                                                                            *
+*   Datei :                                                                  *
+*   =======                                                                  *
+*   demolib.ovm                                                              *
+*                                                                            *
+*   Historie                                                                 *
+*   --------                                                                 *
+*                                                                            *
+*****************************************************************************/
+
+#include "fb.ovm"
+
+
+LIBRARY demolib
+
+	VERSION   = "1.5";
+	AUTHOR    = "J. Nagelmann, A. Neugebauer";
+	COPYRIGHT = "Copyright (C) 1999 LTSoft, Kerpen";
+	COMMENT   = "IFBS Demolib";
+
+CLASS add : CLASS fb/functionblock
+	IS_INSTANTIABLE;
+	COMMENT = "out = in1 + in2";
+	VARIABLES
+		in1 : SINGLE FLAGS = "i"  COMMENT = "input 1";
+		in2 : SINGLE FLAGS = "i"  COMMENT = "input 2";
+		out : SINGLE FLAGS = "o"  COMMENT = "output";
+		zaehler : INT FLAGS = "n";
+	END_VARIABLES;
+	OPERATIONS
+		typemethod : C_FUNCTION <FB_FNC_TYPEMETHOD>;
+	END_OPERATIONS;
+END_CLASS;
+
+CLASS mul : CLASS fb/functionblock
+  	IS_INSTANTIABLE;
+	COMMENT = "out = inp1 * inp2";
+	VARIABLES
+	inp1 : SINGLE FLAGS = "i" COMMENT = "input 1";
+	inp2 : SINGLE FLAGS = "i" COMMENT = "input 2";
+	out :  SINGLE FLAGS = "o" COMMENT = "output";
+	zaehler : INT FLAGS = "n";
+END_VARIABLES;
+OPERATIONS
+	typemethod : C_FUNCTION <FB_FNC_TYPEMETHOD>;
+END_OPERATIONS;
+END_CLASS;
+
+CLASS Rampe : CLASS fb/functionblock
+	IS_INSTANTIABLE;
+	FLAGS = "i";
+	COMMENT = "Rampen-Ausgang mit der variablen Position des Max-Punktes";
+	VARIABLES
+		Periode   : INT    HAS_SET_ACCESSOR FLAGS = "i"              COMMENT = "Anzahl der Abtastungen";
+		Amplitude : SINGLE HAS_SET_ACCESSOR FLAGS = "i" UNIT = " V " COMMENT = "Amplitude in Volt";
+		MaxPos    : INT    HAS_SET_ACCESSOR FLAGS = "p" UNIT = " % " COMMENT = "Position des Maximums zur Periode";
+		OutS      : SINGLE                  FLAGS = "o" UNIT = " V " COMMENT = "Float-Ausgang";
+		OutD      : DOUBLE                  FLAGS = "o" UNIT = " V " COMMENT = "Double-Ausgang";
+		count     : INT                     FLAGS = "n"              COMMENT = "Anzahl der Abtastungen";
+ 	END_VARIABLES;
+ 	OPERATIONS
+		constructor : C_FUNCTION <OV_FNC_CONSTRUCTOR>;
+		checkinit   : C_FUNCTION <OV_FNC_CHECKINIT>;
+		typemethod  : C_FUNCTION <FB_FNC_TYPEMETHOD>;
+ 	END_OPERATIONS;
+END_CLASS;
+ 
+CLASS Sinus : CLASS fb/functionblock
+	IS_INSTANTIABLE;
+	FLAGS = "i";
+	COMMENT = "Sinus-Ausgang mit einstellbarem Offset";
+	VARIABLES
+		Periode   : INT    HAS_SET_ACCESSOR FLAGS = "i"             COMMENT = "Anzahl der Abtastungen";
+		Amplitude : SINGLE HAS_SET_ACCESSOR FLAGS = "i" UNIT = "V"  COMMENT = "Amplitude in Volt";
+		Offset    : SINGLE HAS_SET_ACCESSOR FLAGS = "p" UNIT = "V"  COMMENT = "Offset in Volt";
+		OutS      : SINGLE                  FLAGS = "o" UNIT = "V"  COMMENT = "Float-Ausgang";
+		OutD      : DOUBLE                  FLAGS = "o" UNIT = "V"  COMMENT = "Double-Ausgang";
+		count     : INT                     FLAGS = "n"             COMMENT = "Anzahl der Abtastungen";
+ 	END_VARIABLES;
+ 	OPERATIONS
+		constructor : C_FUNCTION <OV_FNC_CONSTRUCTOR>;
+		checkinit   : C_FUNCTION <OV_FNC_CHECKINIT>;
+		typemethod  : C_FUNCTION <FB_FNC_TYPEMETHOD>;
+ 	END_OPERATIONS;
+END_CLASS;
+
+END_LIBRARY;
