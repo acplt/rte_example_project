@@ -106,8 +106,8 @@ OV_RESULT OV_DLLFNCEXPORT demolib_Rampe_checkinit(
     /*
     *   In dieser Funktion kann man ueberpruefen, ob die Werte von "kritischen" Ports
     *   in den zulaessigen Bereichen liegen und entweder die Werte ueberschreiben oder
-    *   Fehler-Code an Programm uebergeben ( in diesem Fall wird die Instanz nicht
-    *   erzeugt)
+    *   Fehler-Code an Programm uebergeben (in diesem Fall wird die Instanz nicht
+    *   erzeugt).
     */
     
     /*
