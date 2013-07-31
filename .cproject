@@ -36,14 +36,13 @@
 								<option id="gnu.c.compiler.so.debug.option.debugging.level.40529943" name="Debug Level" superClass="gnu.c.compiler.so.debug.option.debugging.level" value="gnu.c.debugging.level.max" valueType="enumerated"/>
 								<option id="gnu.c.compiler.option.include.paths.40529943" name="Include paths (-I)" superClass="gnu.c.compiler.option.include.paths" valueType="includePath">
 									<listOptionValue builtIn="false" value="&quot;${MINGW}/include/&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/build/linux/&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/include/&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/model/&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/../../include/libov/&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/../../include/&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/../../include/ks/&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/../../include/libovks/&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/../../include/plt/&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/../../system/sysdevbase/ov/include/libov/&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/../../system/sysdevbase/ov/include/&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/../../system/sysdevbase/ov/include/ks/&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/../../system/sysdevbase/ov/include/libovks/&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/../../system/sysdevbase/ov/include/plt/&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/build/nt/&quot;"/>
 								</option>
 								<option id="gnu.c.compiler.option.preprocessor.def.symbols.40529943" name="Defined symbols (-D)" superClass="gnu.c.compiler.option.preprocessor.def.symbols" valueType="definedSymbols">
@@ -113,9 +112,9 @@
 									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/include/&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/model/&quot;"/>
 									<!-- IFBSPro -->
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/../../base/include/fb/&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/../../base/model/&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/../../base/include/&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/../../system/sysdevbase/ov/base/include/fb/&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/../../system/sysdevbase/ov/base/model/&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/../../system/sysdevbase/ov/base/include/&quot;"/>
 									<!-- Dependencies -->
 								</option>
 								<option id="gnu.c.compiler.option.preprocessor.def.symbols.86765255" name="Defined symbols (-D)" superClass="gnu.c.compiler.option.preprocessor.def.symbols" valueType="definedSymbols">
