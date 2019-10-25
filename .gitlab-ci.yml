@@ -1,5 +1,8 @@
 image: registry.git.rwth-aachen.de/acplt/rte-tools/rte-build-docker-image/image
 
+variables:
+  GIT_SUBMODULE_STRATEGY: recursive
+
 build:
   stage: build
   script:
