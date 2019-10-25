@@ -11,7 +11,9 @@ include(${RTE_CMAKE_DIR}/ov_functions.cmake)
 include(${RTE_CMAKE_DIR}/ov_definitions.cmake)
 
 # Disable default build of unrequired libraries
-#SET(BUILD_OV_LIBRARY_SSChelper OFF CACHE BOOL "")
+# Example:
+SET(BUILD_OV_LIBRARY_UDPbind OFF CACHE BOOL "")
+SET(BUILD_OV_LIBRARY_SSChelper OFF CACHE BOOL "")
 
 # Include library packages
 add_subdirectory(rte_fblib)
