@@ -21,7 +21,7 @@ build-win32-x64:
     - cd ..
     - mkdir build-win32
     - cd build-win32
-    - cmake -DCMAKE_TOOLCHAIN_FILE=../cmake/mingw-w64-x86_64.cmake -DOV_CODEGEN_PATH="../build/rte/core/codegen/ov_codegen" ..
+    - cmake -DCMAKE_TOOLCHAIN_FILE=../rte/cmake/mingw-w64-x86_64.cmake -DOV_CODEGEN_PATH="../build/rte/core/codegen/ov_codegen" ..
     - make -j$(nproc)
 
 build-linux-armhf:
@@ -34,5 +34,5 @@ build-linux-armhf:
     - cd ..
     - mkdir build-win32
     - cd build-win32
-    - cmake -DCMAKE_TOOLCHAIN_FILE=../cmake/gcc-linux-armhf.cmake -DOV_CODEGEN_PATH="../build/rte/core/codegen/ov_codegen" ..
+    - cmake -DCMAKE_TOOLCHAIN_FILE=../rte/cmake/gcc-linux-armhf.cmake -DOV_CODEGEN_PATH="../build/rte/core/codegen/ov_codegen" ..
     - make -j$(nproc)
