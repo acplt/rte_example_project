@@ -19,4 +19,5 @@ add_subdirectory(rte_misc)
 add_subdirectory(rte_field)
 
 # Include libraries of this project
-# ...
+# Example:
+add_subdirectory(demolib)
