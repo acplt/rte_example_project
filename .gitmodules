@@ -1,12 +1,16 @@
 [submodule "rte"]
 	path = rte
 	url = git@git.rwth-aachen.de:acplt/rte-tools/rte.git
+    branch = ov3
 [submodule "rte_misc"]
 	path = rte_misc
 	url = git@git.rwth-aachen.de:acplt/rte-tools/rte_misc.git
+    branch = ov3
 [submodule "rte_field"]
 	path = rte_field
 	url = git@git.rwth-aachen.de:acplt/rte-tools/rte_field.git
+    branch = ov3
 [submodule "rte_fblib"]
 	path = rte_fblib
 	url = git@git.rwth-aachen.de:acplt/rte-tools/rte_fblib.git
+    branch = ov3
