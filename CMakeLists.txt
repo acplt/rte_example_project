@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.12)
 
-project(ov_test)
+project(ov_test C)
 
 # Include ov core
 add_subdirectory(rte)
