@@ -36,3 +36,11 @@ build-linux-armhf:
     - cd build-win32
     - cmake -DCMAKE_TOOLCHAIN_FILE=../rte/cmake/gcc-linux-armhf.cmake -DOV_CODEGEN_PATH="../build/rte/core/codegen/ov_codegen" ..
     - make -j$(nproc)
+
+build-static:
+  stage: build
+  script:
+    - mkdir build
+    - cd build
+    - cmake -DOV_STATIC_LIBRARIES ..
+    - make -j$(nproc)
