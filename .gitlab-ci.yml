@@ -42,5 +42,5 @@ build-static:
   script:
     - mkdir build
     - cd build
-    - cmake -DOV_STATIC_LIBRARIES ..
+    - cmake -DOV_STATIC_LIBRARIES=TRUE ..
     - make -j$(nproc)
