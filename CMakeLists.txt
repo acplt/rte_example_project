@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.12)
+cmake_minimum_required(VERSION 3.13)
 
 project(ov_test C)
 
@@ -23,3 +23,5 @@ add_subdirectory(rte_field)
 # Include libraries of this project
 # Example:
 add_subdirectory(demolib)
+
+ov_finish_project()
