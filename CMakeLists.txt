@@ -2,6 +2,13 @@ cmake_minimum_required(VERSION 3.13)
 
 project(ov_test C)
 
+# Disable default build of unrequired libraries
+# (Must be done before including the subdirectory with these libraries.)
+# Example:
+SET(BUILD_OV_LIBRARY_UDPbind OFF CACHE BOOL "")
+SET(BUILD_OV_LIBRARY_SSChelper OFF CACHE BOOL "")
+
+
 # Include ov core
 add_subdirectory(rte)
 
@@ -9,11 +16,6 @@ add_subdirectory(rte)
 get_target_property(RTE_CMAKE_DIR ov RTE_CMAKE_DIR)
 include(${RTE_CMAKE_DIR}/ov_functions.cmake)
 include(${RTE_CMAKE_DIR}/ov_definitions.cmake)
-
-# Disable default build of unrequired libraries
-# Example:
-SET(BUILD_OV_LIBRARY_UDPbind OFF CACHE BOOL "")
-SET(BUILD_OV_LIBRARY_SSChelper OFF CACHE BOOL "")
 
 # Include library packages
 add_subdirectory(rte_fblib)
