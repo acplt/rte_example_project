@@ -1,16 +1,16 @@
 [submodule "rte"]
 	path = rte
 	url = ../rte.git
-	branch = ov3
+	branch = master
 [submodule "rte_misc"]
 	path = rte_misc
 	url = ../rte_misc.git
-	branch = ov3
+	branch = master
 [submodule "rte_field"]
 	path = rte_field
 	url = ../rte_field.git
-	branch = ov3
+	branch = master
 [submodule "rte_fblib"]
 	path = rte_fblib
 	url = ../rte_fblib.git
-	branch = ov3
+	branch = master
